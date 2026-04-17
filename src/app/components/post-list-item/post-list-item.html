@@ -1,13 +1,16 @@
 @if (post) {
-  <div class="pt-4 p-2">
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.content }}</p>
-    <div>
-      <span class="badge rounded-pill text-bg-light">
-        {{ post.category.name }}
-      </span>
-      <span>{{ post.createdDate | date:'medium' }}</span>
+  <div class="card mb-3 shadow-sm">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <span class="badge rounded-pill text-bg-secondary">
+          {{ post.category.name }}
+        </span>
+        <small class="text-muted">
+          {{ post.createdDate | date:'mediumDate' }}
+        </small>
+      </div>
+      <h5 class="card-title fw-bold">{{ post.title }}</h5>
+      <p class="card-text text-muted">{{ post.content }}</p>
     </div>
   </div>
-
 }
