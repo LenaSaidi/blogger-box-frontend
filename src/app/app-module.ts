@@ -7,9 +7,10 @@ import { TopBar } from './components/top-bar/top-bar';
 import { PostList } from './components/post-list/post-list';
 import { PostListItem } from './components/post-list-item/post-list-item';
 import { provideHttpClient } from '@angular/common/http';
+import { AddPost } from './components/add-post/add-post';
 
 @NgModule({
-  declarations: [App, TopBar,PostList, PostListItem],
+  declarations: [App, TopBar, PostList, PostListItem, AddPost],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient()],
   bootstrap: [App],
